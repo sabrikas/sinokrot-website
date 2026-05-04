@@ -29,13 +29,13 @@ export function ContactFormSection({ recaptchaSiteKey }: ContactFormSectionProps
     setIsSubmitted(false);
 
     if (!recaptchaSiteKey) {
-      setError("reCAPTCHA yapilandirilmamis.");
+      setError("reCAPTCHA yapılandırılmamış.");
       return;
     }
 
     const recaptchaToken = recaptchaRef.current?.getValue();
     if (!recaptchaToken) {
-      setError("Lutfen robot olmadiginizi dogrulayin.");
+      setError("Lütfen robot olmadığınızı doğrulayın.");
       return;
     }
 
@@ -53,7 +53,7 @@ export function ContactFormSection({ recaptchaSiteKey }: ContactFormSectionProps
       const payload = (await response.json().catch(() => ({}))) as { error?: string };
 
       if (!response.ok) {
-        setError(payload.error ?? "Gonderim basarisiz. Lutfen tekrar deneyin.");
+        setError(payload.error ?? "Gönderim başarısız. Lütfen tekrar deneyin.");
         recaptchaRef.current?.reset();
         return;
       }
@@ -62,7 +62,7 @@ export function ContactFormSection({ recaptchaSiteKey }: ContactFormSectionProps
       setFormData(initialForm);
       recaptchaRef.current?.reset();
     } catch {
-      setError("Baglanti hatasi. Lutfen tekrar deneyin.");
+      setError("Bağlantı hatası. Lütfen tekrar deneyin.");
       recaptchaRef.current?.reset();
     } finally {
       setIsSubmitting(false);
@@ -80,7 +80,7 @@ export function ContactFormSection({ recaptchaSiteKey }: ContactFormSectionProps
               value={formData.name}
               onChange={(event) => setFormData((prev) => ({ ...prev, name: event.target.value }))}
               className="mt-1 w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-200"
-              placeholder="Adinizi ve soyadinizi girin"
+              placeholder="Adınızı ve soyadınızı girin"
             />
           </label>
 
@@ -121,7 +121,7 @@ export function ContactFormSection({ recaptchaSiteKey }: ContactFormSectionProps
                 setFormData((prev) => ({ ...prev, subject: event.target.value }))
               }
               className="mt-1 w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-200"
-              placeholder="Mesajinizin konusu"
+              placeholder="Mesajınızın konusu"
             />
           </label>
 
@@ -135,7 +135,7 @@ export function ContactFormSection({ recaptchaSiteKey }: ContactFormSectionProps
                 setFormData((prev) => ({ ...prev, message: event.target.value }))
               }
               className="mt-1 w-full rounded-xl border border-gray-300 px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-200"
-              placeholder="Mesajinizi yazin"
+              placeholder="Mesajınızı yazın"
             />
           </label>
 
@@ -145,7 +145,7 @@ export function ContactFormSection({ recaptchaSiteKey }: ContactFormSectionProps
             </div>
           ) : (
             <p className="text-sm text-amber-800">
-              reCAPTCHA site anahtari eksik. Sunucuda RECAPTCHA_SITE_KEY tanimlayin.
+              reCAPTCHA site anahtarı eksik. Sunucuda RECAPTCHA_SITE_KEY tanımlayın.
             </p>
           )}
 
@@ -157,7 +157,7 @@ export function ContactFormSection({ recaptchaSiteKey }: ContactFormSectionProps
             size={ButtonSize.Md}
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Gonderiliyor..." : "Gonder"}
+            {isSubmitting ? "Gönderiliyor..." : "Gönder"}
           </Button>
 
           {isSubmitted ? (
@@ -169,13 +169,13 @@ export function ContactFormSection({ recaptchaSiteKey }: ContactFormSectionProps
 
         <div className="space-y-4">
           <span className="inline-flex rounded-full bg-secondary-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-secondary-900">
-            Iletisim
+            İletişim
           </span>
           <h1 className="text-3xl font-semibold text-gray-900 md:text-4xl">
-            Sorulariniz Icin Buradayiz
+            Sorularınız için buradayız
           </h1>
           <p className="text-gray-700">
-            Urunlerimiz, satis noktalarimiz veya is birlikleri hakkinda bilgi almak icin formu
+            Ürünlerimiz, satış noktalarımız veya iş birlikleri hakkında bilgi almak için formu
             doldurabilirsiniz.
           </p>
         </div>

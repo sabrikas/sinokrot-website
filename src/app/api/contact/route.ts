@@ -69,7 +69,7 @@ export async function POST(request: Request) {
   try {
     json = (await request.json()) as ContactBody;
   } catch {
-    return NextResponse.json({ error: "Gecersiz istek." }, { status: 400 });
+    return NextResponse.json({ error: "Geçersiz istek." }, { status: 400 });
   }
 
   const name = strip(json.name, 200);
@@ -84,18 +84,18 @@ export async function POST(request: Request) {
   }
 
   if (!recaptchaToken) {
-    return NextResponse.json({ error: "Lutfen robot olmadiginizi dogrulayin." }, { status: 400 });
+    return NextResponse.json({ error: "Lütfen robot olmadığınızı doğrulayın." }, { status: 400 });
   }
 
   const okCaptcha = await verifyRecaptcha(recaptchaToken);
   if (!okCaptcha) {
-    return NextResponse.json({ error: "reCAPTCHA dogrulanamadi." }, { status: 400 });
+    return NextResponse.json({ error: "reCAPTCHA doğrulanamadı." }, { status: 400 });
   }
 
   const to = getContactFormToEmail();
   if (!to) {
     return NextResponse.json(
-      { error: "Iletisim e-posta adresi yapilandirilmamis (CONTACT_FORM_TO_EMAIL)." },
+      { error: "İletişim e-posta adresi yapılandırılmamış (CONTACT_FORM_TO_EMAIL)." },
       { status: 500 },
     );
   }
@@ -109,7 +109,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "E-posta gonderimi icin SMTP_HOST, SMTP_USER, SMTP_PASSWORD ve EMAIL_FROM ortam degiskenlerini ayarlayin.",
+          "E-posta gönderimi için SMTP_HOST, SMTP_USER, SMTP_PASSWORD ve EMAIL_FROM ortam değişkenlerini ayarlayın.",
       },
       { status: 500 },
     );
@@ -139,11 +139,11 @@ export async function POST(request: Request) {
     message,
     "",
     "---",
-    "Gonderim bilgileri",
-    `Tarih (Turkiye): ${sentAtTr}`,
+    "Gönderim bilgileri",
+    `Tarih (Türkiye): ${sentAtTr}`,
     `Tarih (ISO/UTC): ${sentAtIso}`,
     `IP: ${clientIp}`,
-    `Tarayici (User-Agent): ${userAgent}`,
+    `Tarayıcı (User-Agent): ${userAgent}`,
   ]
     .filter(Boolean)
     .join("\n");
@@ -153,12 +153,12 @@ export async function POST(request: Request) {
       from,
       to,
       replyTo: email,
-      subject: `[Iletisim] ${subject}`,
+      subject: `[İletişim] ${subject}`,
       text,
     });
   } catch {
     return NextResponse.json(
-      { error: "E-posta gonderilemedi. SMTP ayarlarini kontrol edin." },
+      { error: "E-posta gönderilemedi. SMTP ayarlarını kontrol edin." },
       { status: 502 },
     );
   }

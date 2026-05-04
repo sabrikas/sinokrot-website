@@ -3,12 +3,12 @@ import { PageTemplate } from "@/components/layout/PageTemplate";
 
 const breadcrumbs = [
   { label: "Anasayfa", href: "/" },
-  { label: "Cerez Politikasi" },
+  { label: "Çerez Politikası" },
 ];
 
 export default function CookiePolicyPage() {
   return (
-    <PageTemplate breadcrumbs={breadcrumbs} title="Cerez Politikasi">
+    <PageTemplate breadcrumbs={breadcrumbs} title="Çerez Politikası">
       <div className="space-y-4 leading-8 text-gray-700">
         <p>
           İletişim formunda bot ve kötü niyetli kullanımları önlemek için Google reCAPTCHA v2

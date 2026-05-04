@@ -1,48 +1,34 @@
-import type { ProcessCard, StatItem } from "@/components/home/types";
+import type { ProcessCard } from "@/components/home/types";
 import { ChicksIcon } from "../ui/icons/ChicksIcon";
-import { TruckIcon } from "../ui/icons/TruckIcon";
-import { ChickenPackageIcon } from "../ui/icons/ChickenPackageIcon";
 import { HatcheryIcon } from "../ui/icons/HatcheryIcon";
+import { ChickenPackageIcon } from "../ui/icons/ChickenPackageIcon";
 
 export const processCards: ProcessCard[] = [
   {
-    title: "Damızlık Üretim",
-    text: "Uzman ekiplerimiz tarafından kontrol edilen modern tesislerde sağlıklı damızlık üretimi gerçekleştiriyoruz.",
+    title: "Damızlık kümesleri ve sürü yönetimi",
+    text: "Kapalı ve otomasyonlu kümeslerde damızlık sürülerinin gelişimi izlenir; homojen canlı ağırlık ve sağlıklı yarka dönemi için planlı yönetim uygulanır.",
     icon: ChicksIcon,
   },
   {
-    title: "Kuluçka ve Yetiştirme",
-    text: "Otomasyon sistemleriyle desteklenen süreçlerde yüksek verim ve kalite sağlıyoruz.",
+    title: "Yarka ve yumurta dönemi",
+    text: "Yumurtlamaya hazırlık sürecinde çevre koşulları, aydınlatma ve beslenme programları damızlık verimliliğini destekleyecek şekilde düzenlenir.",
     icon: HatcheryIcon,
   },
   {
-    title: "İşleme ve Paketleme",
-    text: "Hijyenik koşullarda üretim, denetim ve paketleme süreçleri titizlikle uygulanır.",
+    title: "Kuluçkalık yumurta ve depolama",
+    text: "Kuluçkalık yumurtanın toplanması, sınıflandırılması ve depolanmasında sıcaklık ve nem takibi özenle yapılır; yumurta kalitesi korunur.",
     icon: ChickenPackageIcon,
   },
   {
-    title: "Dağıtım",
-    text: "Soğuk zinciri koruyan lojistik altyapımızla ürünlerimizi güvenle ulaştırıyoruz.",
-    icon: TruckIcon,
+    title: "Sağlık, biyogüvenlik ve izleme",
+    text: "Düzenli sağlık taramaları ve biyogüvenlik önlemleriyle sürülerin üretim alanında hastalıklara maruz kalma riski azaltılır; kayıtlar sürdürülür.",
+    icon: ChicksIcon,
   },
 ];
 
 export const qualityItems: string[] = [
-  "Kesintisiz soğuk zincir",
-  "Modern üretim teknolojileri",
-  "Sürekli denetim ve kalite kontrol",
-  "Eğitimli ve uzman kadro",
-];
-
-export const logisticsItems: string[] = [
-  "Türkiye geneli bayi ağı",
-  "Orta Doğu ve Türk Cumhuriyetlerine ihracat",
-  "Kendi frigorifik araç filosu",
-];
-
-export const stats: StatItem[] = [
-  { value: "40+", label: "yıl deneyim" },
-  { value: "100.000+", label: "haftalık üretim kapasitesi" },
-  { value: "100+", label: "modern tesis" },
-  { value: "4+", label: "ülkeye ihracat" },
+  "Damızlık sürülerinde düzenli veteriner hekimlik kontrolleri",
+  "Kümes içi hijyen ve biyogüvenlik uygulamaları",
+  "Yumurta depolama ve taşıma koşullarının izlenmesi",
+  "Beslenme ve su tüketiminin planlı yönetimi",
 ];

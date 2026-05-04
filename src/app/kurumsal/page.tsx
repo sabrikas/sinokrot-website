@@ -11,7 +11,7 @@ export default function CorporatePage() {
       coverImageSrc="/sinokrot.jpg"
       breadcrumbs={breadcrumbs}
       title="Kurumsal"
-      content="Sinokrot olarak 1979'dan bugune uzanan tecrubemizle kalite, guven ve surdurulebilirlik odakli bir uretim anlayisini benimsiyoruz. Uretimin her asamasinda ulusal ve uluslararasi standartlara uygun hareket ederek tuketicilerimize saglikli urunler sunuyoruz."
+      content="Sinokrot olarak 1979'dan bugüne uzanan tecrübemizle kalite, güven ve sürdürülebilirlik odaklı bir üretim anlayışını benimsiyoruz. Üretimin her aşamasında ulusal ve uluslararası standartlara uygun hareket ederek tüketicilerimize sağlıklı ürünler sunuyoruz."
     />
   );
 }

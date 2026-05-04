@@ -1,4 +1,5 @@
 import { AboutSection } from "@/components/home/AboutSection";
+import { BlogPreviewSection } from "@/components/home/BlogPreviewSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { ProcessSection } from "@/components/home/ProcessSection";
 import { QualitySection } from "@/components/home/QualitySection";
@@ -6,22 +7,26 @@ import { processCards, qualityItems } from "@/components/home/home-content";
 
 export default function Home() {
   return (
-    <main className="bg-gray-50 text-gray-900">
+    <div className="bg-gray-50 text-gray-900">
       <HeroSection
-        title="Güvenilir Üretim, Sağlıklı Sofralar"
-        description="Sinokrot olarak üretimin her aşamasında kalite, hijyen ve sürdürülebilirliği ön planda tutarak güvenle tüketebileceğiniz ürünler sunuyoruz."
-        primaryCta="Markalarımızı Keşfedin"
+        title="Damızlık piliç üretiminde güven ve süreklilik"
+        description="Sağlıklı sürüler, kontrollü yarka ve yumurta dönemleri ile kuluçkalık yumurta kalitesini aynı çatı altında yönetiyoruz. Damızlık üretiminde hijyen, biyogüvenlik ve izlenebilirlik önceliğimizdir."
+        primaryCta="Markalarımızı keşfedin"
+        primaryHref="/markalarimiz"
+        secondaryCta="Blog"
+        secondaryHref="/blog"
       />
       <AboutSection
-        title="40+ Yıllık Tecrübe"
-        description="1979 yılında başlayan yolculuğumuz, bugün modern üretim tesisleri ve entegre yapımızla devam ediyor. Yem üretiminden kuluçkaya, yetiştiricilikten dağıtıma kadar tüm süreçleri kendi bünyemizde yöneterek kaliteyi her aşamada kontrol altında tutuyoruz."
+        title="Köklü tecrübe"
+        description="1979 yılında başlayan yolculuğumuz, bugün modern üretim tesisleri ve entegre yapımızla devam ediyor. Yem üretiminden kuluçkaya, yetiştiricilikten dağıtıma kadar süreçleri bütünleşik şekilde yöneterek kaliteyi her aşamada kontrol altında tutuyoruz."
       />
-      <ProcessSection title="Entegre Üretim Gücü" cards={processCards} />
+      <ProcessSection title="Damızlık üretim süreci" cards={processCards} />
       <QualitySection
-        title="Kalite ve Güven Önceliğimizdir"
-        description="Üretimin her aşamasında hijyen, sağlık ve kalite standartlarını ön planda tutuyoruz. Tüm süreçlerimiz Tarım Bakanlığı ve Gıda Kodeksi&apos;ne uygun şekilde yürütülür."
+        title="Damızlıkta kalite ve biyogüvenlik"
+        description="Damızlık üretiminde sağlıklı hayvan refahı, doğru beslenme ve stabil yumurta kalitesi birbirini tamamlar. Uygulamalarımız mevzuata uygun şekilde kayıt altına alınır ve denetlenebilir biçimde yürütülür."
         items={qualityItems}
       />
-    </main>
+      <BlogPreviewSection />
+    </div>
   );
 }

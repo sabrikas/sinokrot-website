@@ -3,12 +3,12 @@ import { PageTemplate } from "@/components/layout/PageTemplate";
 
 const breadcrumbs = [
   { label: "Anasayfa", href: "/" },
-  { label: "KVKK Aydinlatma Metni" },
+  { label: "KVKK Aydınlatma Metni" },
 ];
 
 export default function KvkkNoticePage() {
   return (
-    <PageTemplate breadcrumbs={breadcrumbs} title="KVKK Aydinlatma Metni">
+    <PageTemplate breadcrumbs={breadcrumbs} title="KVKK Aydınlatma Metni">
       <div className="space-y-4 leading-8 text-gray-700">
         <p>
           Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (&quot;KVKK&quot;) kapsamında,

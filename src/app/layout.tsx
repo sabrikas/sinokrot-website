@@ -1,27 +1,28 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { IBM_Plex_Mono, Noto_Serif } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Menu } from "@/components/layout/Menu";
 import "./globals.css";
 
-/** Self-hosted variable fonts — avoids build-time requests to Google Fonts (slow/blocked servers). */
-const notoSerif = localFont({
-  src: "../fonts/noto-serif-latin-wght-normal.woff2",
+/** Latin Extended: Türkçe (ğ, ü, ş, ı, ö, ç, İ) ve diğer Latin yazıları. */
+const notoSerif = Noto_Serif({
+  subsets: ["latin", "latin-ext"],
   variable: "--font-noto-serif",
   display: "swap",
-  weight: "100 900",
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = localFont({
-  src: "../fonts/geist-mono-latin-wght-normal.woff2",
-  variable: "--font-geist-mono",
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-ibm-plex-mono",
   display: "swap",
-  weight: "100 900",
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
   title: "Sinokrot",
-  description: "Sinokrot olarak üretimin her aşamasında kalite, hijyen ve sürdürülebilirliği ön planda tutarak güvenle tüketebileceğiniz ürünler sunuyoruz.",
+  description:
+    "Sinokrot damızlık piliç üretiminde kalite, hijyen ve biyogüvenlikle güvenilir kuluçkalık yumurta ve sürü yönetimi sunar.",
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
@@ -36,8 +37,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${notoSerif.variable} ${geistMono.variable} h-full antialiased overflow-x-hidden`}
+      lang="tr"
+      className={`${notoSerif.variable} ${ibmPlexMono.variable} h-full antialiased overflow-x-hidden`}
     >
       <body className={`${notoSerif.className} min-h-full flex flex-col`}>
         <Menu />

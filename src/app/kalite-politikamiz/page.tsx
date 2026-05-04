@@ -2,7 +2,7 @@ import { PageTemplate } from "@/components/layout/PageTemplate";
 
 const breadcrumbs = [
   { label: "Anasayfa", href: "/" },
-  { label: "Kalite Politikamiz" },
+  { label: "Kalite Politikamız" },
 ];
 
 export default function QualityPolicyPage() {
@@ -11,8 +11,8 @@ export default function QualityPolicyPage() {
       coverImageSrc="/sinokrot.jpg"
       coverImageAlt="Kalite ve standartlar"
       breadcrumbs={breadcrumbs}
-      title="Kalite Politikamiz"
-      content="Kalite politikamiz; mevzuata uyum, surekli iyilestirme, calisan egitimi ve musteri geri bildirimlerini is sureclerine entegre etmeyi esas alir. Urun guvenligi ve izlenebilirlik icin kayit, denetim ve analizler duzenli olarak yurutulur. Hedefimiz, her partide tutarli kalite ve tuketici memnuniyetidir."
+      title="Kalite Politikamız"
+      content="Kalite politikamız; mevzuata uyum, sürekli iyileştirme, çalışan eğitimi ve müşteri geri bildirimlerini iş süreçlerine entegre etmeyi esas alır. Ürün güvenliği ve izlenebilirlik için kayıt, denetim ve analizler düzenli olarak yürütülür. Hedefimiz, her partide tutarlı kalite ve tüketici memnuniyetidir."
     />
   );
 }

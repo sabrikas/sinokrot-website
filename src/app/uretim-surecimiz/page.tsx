@@ -2,17 +2,17 @@ import { PageTemplate } from "@/components/layout/PageTemplate";
 
 const breadcrumbs = [
   { label: "Anasayfa", href: "/" },
-  { label: "Uretim Surecimiz" },
+  { label: "Üretim Sürecimiz" },
 ];
 
 export default function ProductionProcessPage() {
   return (
     <PageTemplate
       coverImageSrc="/sinokrot.jpg"
-      coverImageAlt="Uretim sureci"
+      coverImageAlt="Üretim süreci"
       breadcrumbs={breadcrumbs}
-      title="Uretim Surecimiz"
-      content="Uretimimiz; yem uretiminden baslayarak civciv, yetistirme, yumurta ve isleme hatlarina kadar kontrollu ve kayit altina alinan asamalardan olusur. Her asamada hijyen, beslenme ve refah kriterlerine uygunluk izlenir. Lojistik ve dagitimda soguk zincir ve zamaninda teslimat onceliklendirilir."
+      title="Üretim Sürecimiz"
+      content="Üretimimiz; yem üretiminden başlayarak civciv, yetiştirme, yumurta ve işleme hatlarına kadar kontrollü ve kayıt altına alınan aşamalardan oluşur. Her aşamada hijyen, beslenme ve refah kriterlerine uygunluk izlenir. Lojistik ve dağıtımda soğuk zincir ve zamanında teslimat önceliklendirilir."
     />
   );
 }

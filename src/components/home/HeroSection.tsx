@@ -4,14 +4,18 @@ type HeroSectionProps = {
   title: string;
   description: string;
   primaryCta: string;
+  primaryHref: string;
   secondaryCta?: string;
+  secondaryHref?: string;
 };
 
 export function HeroSection({
   title,
   description,
   primaryCta,
+  primaryHref,
   secondaryCta,
+  secondaryHref,
 }: HeroSectionProps) {
   return (
     <div className="relative flex h-screen w-screen items-center justify-center overflow-hidden">
@@ -32,23 +36,19 @@ export function HeroSection({
           {description}
         </p>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <Button as="a" href="#surec" shape={ButtonShape.Pill}>
+          <Button as="a" href={primaryHref} shape={ButtonShape.Pill}>
             {primaryCta}
           </Button>
-          {secondaryCta && (
-            <>
+          {secondaryCta && secondaryHref ? (
             <Button
-            as="a"
-            href="/iletisim"
-            variant={ButtonVariant.Outline}
-            shape={ButtonShape.Pill}
-          >
-            {secondaryCta}
-            
-          </Button>
-            </>
-          
-          )}
+              as="a"
+              href={secondaryHref}
+              variant={ButtonVariant.Outline}
+              shape={ButtonShape.Pill}
+            >
+              {secondaryCta}
+            </Button>
+          ) : null}
         </div>
       </section>
     </div>

@@ -15,7 +15,7 @@ export default function ContactPage() {
     <PageTemplate
       breadcrumbs={breadcrumbs}
       title="İletişim"
-      coverImageAlt="İletişim sayfasi kapak gorseli"
+      coverImageAlt="İletişim sayfası kapak görseli"
     >
       <ContactFormSection recaptchaSiteKey={recaptchaSiteKey} />
     </PageTemplate>
