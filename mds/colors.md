@@ -1,0 +1,35 @@
+--color-primary-50: #ebfef3;
+--color-primary-100: #d0fbe0;
+--color-primary-200: #a4f6c6;
+--color-primary-300: #6aeba8;
+--color-primary-400: #2fd885;
+--color-primary-500: #0abf6c;
+--color-primary-600: #009353;
+--color-primary-700: #007c49;
+--color-primary-800: #03623b;
+--color-primary-900: #045032;
+--color-primary-950: #012d1d;
+
+--color-secondary-50: #feffe7;
+--color-secondary-100: #faffc4;
+--color-secondary-200: #f8ff8f;
+--color-secondary-300: #f5ff4e;
+--color-secondary-400: #f0fb1a;
+--color-secondary-500: #dee604;
+--color-secondary-600: #c4c500;
+--color-secondary-700: #959004;
+--color-secondary-800: #78710b;
+--color-secondary-900: #665f0f;
+--color-secondary-950: #3b3603;
+
+--color-gray-50: #fafafa;
+--color-gray-100: #f5f5f5;
+--color-gray-200: #e6e6e6;
+--color-gray-300: #d3d3d3;
+--color-gray-400: #a3a3a3;
+--color-gray-500: #757575;
+--color-gray-600: #535353;
+--color-gray-700: #404040;
+--color-gray-800: #272727;
+--color-gray-900: #1a1a1a;
+--color-gray-950: #0b0b0b;

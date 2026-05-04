@@ -3,21 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "sh -ac 'set -a; [ -f .env.development ] && . ./.env.development; set +a; next dev -p \"${PORT:-3000}\"'",
     "build": "next build",
-    "start": "next start",
+    "start": "sh -ac 'set -a; [ -f .env.production ] && . ./.env.production; set +a; next start -p \"${PORT:-3000}\"'",
     "lint": "eslint"
   },
   "dependencies": {
+    "motion": "^12.38.0",
     "next": "16.2.3",
+    "nodemailer": "^8.0.7",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-google-recaptcha": "^3.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/nodemailer": "^8.0.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-google-recaptcha": "^2.1.9",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.3",
