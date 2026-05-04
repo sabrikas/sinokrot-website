@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Noto_Serif } from "next/font/google";
+import localFont from "next/font/local";
 import { Footer } from "@/components/layout/Footer";
 import { Menu } from "@/components/layout/Menu";
 import "./globals.css";
 
-const notoSerif = Noto_Serif({
+/** Self-hosted variable fonts — avoids build-time requests to Google Fonts (slow/blocked servers). */
+const notoSerif = localFont({
+  src: "../fonts/noto-serif-latin-wght-normal.woff2",
   variable: "--font-noto-serif",
-  subsets: ["latin"],
+  display: "swap",
+  weight: "100 900",
 });
 
-const geistMono = Geist_Mono({
+const geistMono = localFont({
+  src: "../fonts/geist-mono-latin-wght-normal.woff2",
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {

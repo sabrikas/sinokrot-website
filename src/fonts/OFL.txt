@@ -1,0 +1,6 @@
+Fonts in this folder are self-hosted copies used at build time (no network fetch).
+
+- noto-serif-latin-wght-normal.woff2 — Noto Serif (SIL Open Font License 1.1)
+- geist-mono-latin-wght-normal.woff2 — Geist Mono (SIL Open Font License 1.1)
+
+Full license texts: https://openfontlicense.org
