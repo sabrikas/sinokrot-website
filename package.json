@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "sh -ac 'set -a; [ -f .env.development ] && . ./.env.development; set +a; next dev -p \"${PORT:-3000}\"'",
+    "dev": "next dev",
     "build": "next build",
-    "start": "sh -ac 'set -a; [ -f .env.production ] && . ./.env.production; set +a; next start -p \"${PORT:-3000}\"'",
+    "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
